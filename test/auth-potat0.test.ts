@@ -1,14 +1,14 @@
-import DummyClass from '../src/auth-potat0'
+import { createStore, applyMiddleware } from 'redux'
+import { State, Action, Reducer } from '../src/types'
+import { reducer as authReducer, actions } from '../src/auth-potat0'
 
-/**
- * Dummy test
- */
-describe('Dummy test', () => {
-  it('works if true is truthy', () => {
-    expect(true).toBeTruthy()
-  })
+const rootReducer = (state: State, action: Action): Reducer => ({ auth: authReducer })
+let store
 
-  it('DummyClass is instantiable', () => {
-    expect(new DummyClass()).toBeInstanceOf(DummyClass)
-  })
+beforeEach(() => {
+  store = createStore(rootReducer, applyMiddleware())
+})
+
+test('authenticating against no stored token', () => {
+  expect(1).toEqual(1)
 })

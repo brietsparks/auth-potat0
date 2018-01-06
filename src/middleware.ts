@@ -9,7 +9,9 @@ interface Decoded {
   sub: string
 }
 
-export const onAttemptAuthentication = (store: any) => (next: any) => (action: Partial<Action>) => {
+export const onAttemptAuthentication = () => (store: any) => (next: any) => (
+  action: Partial<Action>
+) => {
   if (action.type === actionTypes.ATTEMPT_AUTHENTICATION) {
     const { dispatch } = store
 

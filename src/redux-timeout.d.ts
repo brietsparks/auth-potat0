@@ -12,4 +12,6 @@ declare module 'redux-timeout' {
       toCall: (...args: any[]) => any
     }
   }
+
+  function reduxTimeout(): ((store: any) => (next: any) => any)
 }

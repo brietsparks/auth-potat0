@@ -1,4 +1,12 @@
-// Import here Polyfills if needed. Recommended core-js (npm i -D core-js)
-// import "core-js/fn/array.find"
-// ...
-export default class DummyClass {}
+import { reduxTimeout } from 'redux-timeout'
+
+export { default as reducer } from './reducer'
+
+import { onAttemptAuthentication } from './middleware'
+export const middleware = {
+  onAttemptAuthentication,
+  reduxTimeout
+}
+
+import * as actions from './actions'
+export { actions }
