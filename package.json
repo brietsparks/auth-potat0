@@ -89,6 +89,8 @@
     "lodash.camelcase": "^4.3.0",
     "prettier": "^1.4.4",
     "prompt": "^1.0.0",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
     "replace-in-file": "^3.0.0-beta.2",
     "rimraf": "^2.6.1",
     "rollup": "^0.52.0",
@@ -106,6 +108,9 @@
     "validate-commit-msg": "^2.12.2"
   },
   "dependencies": {
-    "marked": "^0.3.9"
+    "@types/jwt-decode": "^2.2.1",
+    "jwt-decode": "^2.2.0",
+    "marked": "^0.3.9",
+    "redux-timeout": "^2.0.0"
   }
 }
