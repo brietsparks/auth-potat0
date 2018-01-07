@@ -9,3 +9,8 @@ export interface AuthState {
 }
 
 export type AuthReducer = (state: AuthState, action: Action) => AuthState
+
+export interface TokenPayload {
+  sub: string
+  exp: number
+}

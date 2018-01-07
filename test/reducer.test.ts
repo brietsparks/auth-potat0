@@ -20,11 +20,14 @@ describe('authReducer', () => {
     })
   })
 
-  it(`returns defaultState on action ${types.LOGOUT}`, () => {
+  it(`returns clears userId on action ${types.LOGOUT}`, () => {
     const initialState = {
       userId: '1',
       authenticationAttempted: true
     }
-    expect(authReducer(initialState, { type: types.LOGOUT })).toEqual(defaultState)
+    expect(authReducer(initialState, { type: types.LOGOUT })).toEqual({
+      userId: undefined,
+      authenticationAttempted: true
+    })
   })
 })

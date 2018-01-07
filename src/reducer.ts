@@ -16,7 +16,7 @@ export const authReducer: AuthReducer = (
     case actionTypes.AUTHENTICATION_ATTEMPTED:
       return Object.assign({}, state, { authenticationAttempted: true })
     case actionTypes.LOGOUT:
-      return defaultState
+      return Object.assign({}, state, { userId: undefined, authenticationAttempted: true })
     default:
       return state
   }
