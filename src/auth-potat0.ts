@@ -1,4 +1,5 @@
-import { reduxTimeout } from 'redux-timeout'
+import * as rt from 'redux-timeout'
+const { reduxTimeout } = rt
 
 export { default as reducer } from './reducer'
 

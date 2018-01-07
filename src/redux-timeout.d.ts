@@ -1,5 +1,5 @@
 declare module 'redux-timeout' {
-  function addTimeout(
+  export function addTimeout(
     // todo: figure out signature (also see mw)
     timeout: () => number | null,
     action: string,
@@ -13,5 +13,5 @@ declare module 'redux-timeout' {
     }
   }
 
-  function reduxTimeout(): ((store: any) => (next: any) => any)
+  export function reduxTimeout(): ((store: any) => (next: any) => any)
 }

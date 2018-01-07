@@ -1,9 +1,11 @@
-import { addTimeout } from 'redux-timeout'
+import * as rt from 'redux-timeout'
 import decode from 'jwt-decode'
 
 import { Action, TokenPayload } from './types'
 import { logout, setUserId, authenticationAttempted, types as actionTypes } from './actions'
 import { accessTokenIsFresh, getAccessTokenTTL, getAccessToken } from './storage'
+
+const { addTimeout } = rt
 
 export const onAttemptAuthentication = () => (store: any) => (next: any) => (
   action: Partial<Action>
